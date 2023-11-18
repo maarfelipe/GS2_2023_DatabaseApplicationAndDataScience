@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="914394C5-8B9B-5DA4-2042-95BD378E0A89" name="MEDICO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:05:13 UTC</createdTime>
+<ownerDesignName>GS_LOGICO</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_medico " id="949CDA11-0746-9773-1822-7F0F8D0E6A74">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:05:21 UTC</createdTime>
+<ownerDesignName>GS_LOGICO</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_medico" id="03F2A882-8F9A-3998-8111-50271A1FF986">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:05:37 UTC</createdTime>
+<ownerDesignName>GS_LOGICO</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>55</dataTypeSize>
+<ownDataTypeParameters>55,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_crm" id="E2380B02-2CC0-BE13-32A1-8991CE3E0CB5">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:08:40 UTC</createdTime>
+<ownerDesignName>GS_LOGICO</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>55</dataTypeSize>
+<ownDataTypeParameters>55,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_email" id="C8EF7961-631E-65DE-4F16-8598F6E6BEC2">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:09:01 UTC</createdTime>
+<ownerDesignName>GS_LOGICO</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>65</dataTypeSize>
+<ownDataTypeParameters>65,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2A27FBCA-BC74-CB76-17D6-34CC90E3CECA" name="T_MEDICO PK">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:05:35 UTC</createdTime>
+<ownerDesignName>GS_LOGICO</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>949CDA11-0746-9773-1822-7F0F8D0E6A74</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
