@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="GS_RELACIONAL" id="6D5B37D6-7980-2C81-0FC5-B32A2E95B288" version="3.5">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 00:59:23 UTC</createdTime>
+<ownerDesignName>DATABASE_GS</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6D5B37D6-7980-2C81-0FC5-B32A2E95B288</designId>
+</OSDM_Design>

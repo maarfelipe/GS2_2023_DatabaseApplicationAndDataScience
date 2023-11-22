@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F4B902B-0824-3D22-0B1B-DA54E06A52D0" name="PERTENCER">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_medico" id="6054E90C-EF96-31CC-7A38-64A9594189AC">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="54EF24AA-A4BE-3621-121A-B317ED2383E7" referredColumn="6FDCD55B-4E74-91A3-E3E3-36B845761C26"/>
+</associations>
+</Column>
+<Column name="id_consultorio" id="41AEEC36-ACAA-D6E1-9804-84520B4FEEB7">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E83B6F37-B2B2-FDF5-8B6C-4DFAE105BBB0" referredColumn="D108AF94-EA0A-7A68-0CF5-C7504CEC0B44"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BFE313B4-CE46-CE19-D795-B3116237C252" name="PERTENCER_PK">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6054E90C-EF96-31CC-7A38-64A9594189AC"/>
+<colUsage columnID="41AEEC36-ACAA-D6E1-9804-84520B4FEEB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAEF7256-0244-2259-B6BF-694CF5D00988" name="FK_PERTENCER_MEDICO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>2D56F962-3297-CE47-D1D9-EDA8A5B9F6DB</generatorID>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6054E90C-EF96-31CC-7A38-64A9594189AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F1FEF22-81B5-9644-F70E-DF96DEA6EE35" name="FK_PERTENCER_CONSULTORIO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>2D56F962-3297-CE47-D1D9-EDA8A5B9F6DB</generatorID>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41AEEC36-ACAA-D6E1-9804-84520B4FEEB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

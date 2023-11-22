@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EBE5EC6F-D109-C5CB-493D-FA1F47674B94" name="IMAGEM">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:02:58 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_imagem" id="5F8E3AA9-161D-86C3-59A6-8B44D198D810">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:03:11 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="8562555F-1FC2-C3FC-7A3C-87D2DCBE4726">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:04:54 UTC</createdTime>
+<generatorID>7DE6E67F-8FC5-6652-11D5-06136F7A5664</generatorID>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<referedAttribute>38B2B83B-1A59-5AF5-2F22-DB2476D5F7D9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_data_hora" id="FCE21697-FD4F-E68C-73EA-423162129929">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:03:43 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_resultado" id="7270F414-1531-0984-83AC-3A5019E53519">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:04:12 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>55</dataTypeSize>
+<ownDataTypeParameters>55,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F583C912-F1C9-76F0-A375-AD9143CF60E4" name="T_IMAGEM PK">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:03:26 UTC</createdTime>
+<ownerDesignName>GS_RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5F8E3AA9-161D-86C3-59A6-8B44D198D810</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
