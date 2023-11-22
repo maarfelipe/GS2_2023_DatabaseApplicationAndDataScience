@@ -1,53 +1,52 @@
-CREATE OR REPLACE PROCEDURE realizar_carga_inicial AS
+CREATE OR REPLACE PROCEDURE carregar_endereco
+IS
+    v_ds_logradouro endereco.ds_logradouro%TYPE;
+    v_ds_complemento endereco.ds_complemento%TYPE;
+    v_nm_cidade endereco.nm_cidade%TYPE;
+    v_nm_estado endereco.nm_estado%TYPE;
+    v_ds_cep endereco.ds_cep%TYPE;
+
+    -- Exce√ß√£o personalizada 1
+    DUP_VAL_EXCEPTION EXCEPTION;
+    PRAGMA EXCEPTION_INIT(DUP_VAL_EXCEPTION, -1);
+
+    -- Exce√ß√£o personalizada 2
+    INVALID_CITY_EXCEPTION EXCEPTION;
+    PRAGMA EXCEPTION_INIT(INVALID_CITY_EXCEPTION, -2);
+
+    -- Exce√ß√£o personalizada 3
+    INVALID_STATE_EXCEPTION EXCEPTION;
+    PRAGMA EXCEPTION_INIT(INVALID_STATE_EXCEPTION, -3);
+
 BEGIN
-    -- Tratamento de exceÁ„o para erros especÌficos
-    DECLARE
-        l_divisor NUMBER := 0;
-    BEGIN
-        -- Bloco 1
-        INSERT INTO endereco (ds_logradouro, ds_complemento, nm_cidade, nm_estado, ds_cep)
-        VALUES ('Rua A', 'Apto 101', 'Cidade A', 'Estado A', '12345678');
+    FOR i IN 1..10
+    LOOP
+        v_ds_logradouro := 'Rua ' || TO_CHAR(i);
+        v_ds_complemento := 'Complemento ' || TO_CHAR(i);
+        v_nm_cidade := CASE WHEN i <= 5 THEN 'Valid City' ELSE 'Invalid City' END;
+        v_nm_estado := CASE WHEN i <= 5 THEN 'Valid State' ELSE 'Invalid State' END;
+        v_ds_cep := '1234567' || TO_CHAR(i);
 
-        -- Bloco 2
-        INSERT INTO endereco (ds_logradouro, ds_complemento, nm_cidade, nm_estado, ds_cep)
-        VALUES ('Rua B', 'Apto 102', 'Cidade B', 'Estado B', '23456789');
+        BEGIN
+            INSERT INTO endereco (ds_logradouro, ds_complemento, nm_cidade, nm_estado, ds_cep)
+            VALUES (v_ds_logradouro, v_ds_complemento, v_nm_cidade, v_nm_estado, v_ds_cep);
 
-        -- Bloco 3
-        l_divisor := 1 / 0; -- Gera um erro de divis„o por zero
-        INSERT INTO endereco (ds_logradouro, ds_complemento, nm_cidade, nm_estado, ds_cep)
-        VALUES ('Rua C', 'Apto 103', 'Cidade C', 'Estado C', '34567890');
+            COMMIT;
 
-        -- Bloco 4
-        INSERT INTO endereco (ds_logradouro, ds_complemento, nm_cidade, nm_estado, ds_cep)
-        VALUES ('Rua D', 'Apto 104', 'Cidade D', 'Estado D', '45678901');
-
-        -- Bloco 5
-        INSERT INTO endereco (ds_logradouro, ds_complemento, nm_cidade, nm_estado, ds_cep)
-        VALUES ('Rua E', 'Apto 105', 'Cidade E', 'Estado E', '56789012');
-    EXCEPTION
-        WHEN ZERO_DIVIDE THEN
-            -- Tratamento para erro de divis„o por zero
-            INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
-            VALUES (1, 'Erro de Divis„o por Zero', SYSDATE, USER);
-        WHEN NO_DATA_FOUND THEN
-            -- Tratamento para erro de nenhum dado encontrado
-            INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
-            VALUES (2, 'Nenhum Dado Encontrado', SYSDATE, USER);
-        WHEN OTHERS THEN
-            -- Tratamento genÈrico para outros erros
-            INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
-            VALUES (3, SQLERRM, SYSDATE, USER);
-    END;
-
-    -- Outros blocos de INSERTs podem ser adicionados aqui
-
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        -- Tratamento genÈrico para erros durante a execuÁ„o da procedure
-        INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
-        VALUES (4, SQLERRM, SYSDATE, USER);
-        ROLLBACK;
-END realizar_carga_inicial;
-/
+        EXCEPTION
+            WHEN DUP_VAL_EXCEPTION THEN
+                INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
+                VALUES (-1, 'Duplicated Value', SYSDATE, USER);
+            WHEN INVALID_CITY_EXCEPTION THEN
+                INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
+                VALUES (-2, 'Invalid City', SYSDATE, USER);
+            WHEN INVALID_STATE_EXCEPTION THEN
+                INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
+                VALUES (-3, 'Invalid State', SYSDATE, USER);
+            WHEN OTHERS THEN
+                INSERT INTO t_erro (cd_erro, nm_erro, dt_ocorrencia, nm_usuario)
+                VALUES (-999, SQLERRM, SYSDATE, USER);
+        END;
+    END LOOP;
+END carregar_endereco;
 
