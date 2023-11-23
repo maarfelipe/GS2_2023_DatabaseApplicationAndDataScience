@@ -1,19 +1,19 @@
 ------------------------TABELA ENDERCO--------------------------------------
 DROP TABLE endereco CASCADE CONSTRAINTS;
 CREATE TABLE endereco (
-    id_endereco    NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_endereco    NUMBER (4) PRIMARY KEY,
     ds_logradouro  VARCHAR2(50) NOT NULL,
     ds_complemento VARCHAR2(45) NOT NULL,
     nm_cidade      VARCHAR2(55) NOT NULL,
     nm_estado      VARCHAR2(55) NOT NULL,
-    ds_cep         VARCHAR2(8) NOT NULL
+    ds_cep         VARCHAR2(9) NOT NULL
 );
 
 
 -------------------TABELA CONSULTORIO------------------------------
 DROP TABLE CONSULTORIO CASCADE CONSTRAINTS;
 CREATE TABLE CONSULTORIO  (
-    id_consultorio NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_consultorio NUMBER (4) PRIMARY KEY,
     id_endereco    NUMBER (3) NOT NULL,
     nm_empresa     VARCHAR2(55) NOT NULL,
     nr_cnpj        VARCHAR2(14) NOT NULL
@@ -27,7 +27,7 @@ ALTER TABLE CONSULTORIO
 ----------------------TABELA USUARIO-----------------------
 DROP TABLE usuario CASCADE CONSTRAINTS;
 CREATE TABLE usuario (
-    id_usuario NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_usuario NUMBER (4) PRIMARY KEY,
     nm_usuario VARCHAR2(55) NOT NULL,
     nr_cpf     VARCHAR2(11) NOT NULL,
     ds_email   VARCHAR2(75) NOT NULL,
@@ -44,7 +44,7 @@ CHECK (upper(ds_genero) = 'M' OR upper(ds_genero) = 'F' OR upper(ds_genero) = 'N
 -------------------TABELA IMAGEM-----------------------------
 DROP TABLE imagem CASCADE CONSTRAINTS;
 CREATE TABLE imagem (
-    id_imagem    NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_imagem    NUMBER (4) PRIMARY KEY,
     id_usuario   NUMBER(2) NOT NULL,
     dt_data_hora TIMESTAMP NOT NULL,
     ds_resultado VARCHAR2(55) NOT NULL
@@ -60,7 +60,7 @@ ALTER TABLE imagem
 ---------------------TABELA MEDICO----------------------
 DROP TABLE medico CASCADE CONSTRAINTS;
 CREATE TABLE medico (
-    id_medico NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_medico NUMBER (4) PRIMARY KEY,
     nm_medico VARCHAR2(55) NOT NULL,
     ds_crm    VARCHAR2(55) NOT NULL,
     ds_email  VARCHAR2(65) NOT NULL
@@ -86,7 +86,7 @@ ALTER TABLE pertencer
 ----------------TABELA CONSULTA-------------------------------
 DROP TABLE consulta CASCADE CONSTRAINTS;
 CREATE TABLE consulta (
-    id_consulta   NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_consulta  NUMBER (4) PRIMARY KEY,
     id_consultorio NUMBER(2) NOT NULL,
     id_medico      NUMBER(2) NOT NULL,
     id_usuario     NUMBER(2) NOT NULL,
@@ -109,7 +109,7 @@ ALTER TABLE consulta
 -----------------TABELA REGISTRO ERRO--------------
 drop table t_erro cascade constraints;
 Create table t_erro(
-    cd_erro number(3),
+    cd_erro NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nm_erro varchar(50),
     dt_ocorrencia date,
     nm_usuario varchar(50)
