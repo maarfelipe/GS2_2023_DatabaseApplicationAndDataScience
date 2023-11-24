@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TERv1" directorySegmentName="seg_0" id="FF6D5C62-AD19-FE61-F904-A9545B760D24">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:18:57 UTC</createdTime>
+<ownerDesignName>DermaHelp_Global_Solution_Logico</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<sourcePk>7DB66D1E-1EEB-F0EC-3670-6754A1CBBA76</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>88D8A143-7428-1B7A-A990-6034C612ACD2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EE27DEDD-BC91-2BB2-DCDE-AF72AA37CD4D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

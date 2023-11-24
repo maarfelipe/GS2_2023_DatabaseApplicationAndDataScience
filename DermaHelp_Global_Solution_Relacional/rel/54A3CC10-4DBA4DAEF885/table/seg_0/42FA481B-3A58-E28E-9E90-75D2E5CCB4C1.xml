@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="42FA481B-3A58-E28E-9E90-75D2E5CCB4C1" name="CONSULTORIO ">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>88D8A143-7428-1B7A-A990-6034C612ACD2</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<ordsAlias>t_consultorio</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_consultorio" id="D108AF94-EA0A-7A68-0CF5-C7504CEC0B44">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>F32C09B3-A472-88BA-D423-688FA46675E7</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_endereco" id="9C77BBED-AAFB-85A4-366F-5E0D0EECFF06">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>1FA4E47C-D871-2AD5-A235-E7DA5BACE3FF</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A4DB8D5-30B6-C6B8-A977-A60D96294045" referredColumn="74AFE8AE-66B9-88B7-03BB-679085831EA2"/>
+</associations>
+</Column>
+<Column name="nm_empresa" id="DFFA6038-44E4-5663-9299-4A73E8EA14C7">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>1FEC8AC8-1D5D-8BF6-CE57-CAFF34C914DD</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>55</dataTypeSize>
+<ownDataTypeParameters>55,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_cnpj" id="26766498-617F-FE16-12E7-FCC4C79D9539">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>612F18DF-F6AE-E7BD-9720-E47031CB4449</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="899C4E92-2115-21B5-8DF8-ABDBF75B9654" name="PK_CONSULTORIO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>7DB66D1E-1EEB-F0EC-3670-6754A1CBBA76</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D108AF94-EA0A-7A68-0CF5-C7504CEC0B44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0083FAC1-2F45-A89B-58DD-A30E5026E394" name="IDX_CONSULTORIO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D3A48DBF-81F7-01D3-D448-C240D464F2F9</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="9C77BBED-AAFB-85A4-366F-5E0D0EECFF06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37687325-28F4-6400-38D0-4AC7C05472D4" name="FK_CONSULTORIO_ENDERECO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>D3A48DBF-81F7-01D3-D448-C240D464F2F9</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C77BBED-AAFB-85A4-366F-5E0D0EECFF06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
