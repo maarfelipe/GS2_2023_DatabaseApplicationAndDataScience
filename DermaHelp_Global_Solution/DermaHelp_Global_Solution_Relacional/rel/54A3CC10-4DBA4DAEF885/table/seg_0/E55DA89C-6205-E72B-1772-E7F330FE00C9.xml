@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E55DA89C-6205-E72B-1772-E7F330FE00C9" name="CONSULTA">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>EE27DEDD-BC91-2BB2-DCDE-AF72AA37CD4D</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<ordsAlias>t_consulta</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_consulta" id="583D3F3B-11A1-2841-2E7E-D09BA8DF5040">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>A8E9CF0B-354B-4B3F-D20B-9468A24C6D18</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_consultorio" id="F121C027-26D9-31A0-F23C-FFF329E4A4F7">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>4E8A020A-9D96-448A-7F2D-7F9AA78B0175</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA9C4E2D-EA41-45C0-2974-59F73C8C3616" referredColumn="D108AF94-EA0A-7A68-0CF5-C7504CEC0B44"/>
+</associations>
+</Column>
+<Column name="id_medico" id="2A92A714-B8F9-B29E-4B04-15301F396A6B">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>E5280FEB-4124-1701-7075-DB070ED17DA1</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="67F5DCD1-AF29-ECEF-81DF-3FB134C3336C" referredColumn="6FDCD55B-4E74-91A3-E3E3-36B845761C26"/>
+</associations>
+</Column>
+<Column name="id_usuario" id="99FE9B75-1339-C17D-B31E-DCF5559CF634">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>9C1EC393-2FF9-035E-B4BB-41D8FF3C9E3C</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DB03F7B-DFAC-342C-E9B3-857B6D554445" referredColumn="63C9764C-27AA-960B-3F01-C2F0B5719D9E"/>
+</associations>
+</Column>
+<Column name="dt_data_hora" id="26040624-8411-271A-0383-9E0FC84D7D38">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>22767282-FF32-4FA9-449D-954BD91E748B</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9029F6C6-9B78-A507-BFA4-58A77B25C2AC" name="PK_CONSULTA">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>94C519DF-4B67-81C9-48A0-6E1BCC4BB9D4</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="583D3F3B-11A1-2841-2E7E-D09BA8DF5040"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0E3B4F73-F8FF-6C8D-2C24-D9FBE143372D" name="FK_CONSULTA_USUARIO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>46E4B4A3-AC2F-5815-7A10-51513DC20D90</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99FE9B75-1339-C17D-B31E-DCF5559CF634"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C7174B0-274E-AFF2-74AB-BCAC89AACDD4" name="FK_CONSULTA_MEDICO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>C7DA0282-C645-88B9-47FA-B17B02E30DEA</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A92A714-B8F9-B29E-4B04-15301F396A6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B713D289-ABDD-AAED-6617-59835A733CB4" name="FK_CONSULTA_CONSULTORIO">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-18 12:01:00 UTC</createdTime>
+<generatorID>FF6D5C62-AD19-FE61-F904-A9545B760D24</generatorID>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F121C027-26D9-31A0-F23C-FFF329E4A4F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

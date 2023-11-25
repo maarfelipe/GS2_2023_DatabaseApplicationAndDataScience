@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_4" directorySegmentName="seg_0" id="46E4B4A3-AC2F-5815-7A10-51513DC20D90">
+<createdBy>luizz</createdBy>
+<createdTime>2023-11-17 01:20:26 UTC</createdTime>
+<ownerDesignName>DermaHelp_Global_Solution_Relacional</ownerDesignName>
+<engineerTo>
+<item key="54A3CC10-9346-B57A-5282-4DBA4DAEF885" value="true"/>
+</engineerTo>
+<sourcePk>28353388-4D83-2FFA-5940-4DEE81F5EBB6</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0530E58D-2105-7065-F9B4-55489C89522B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EE27DEDD-BC91-2BB2-DCDE-AF72AA37CD4D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
